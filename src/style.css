@@ -4,11 +4,9 @@
     --border: gray;
 }
 
-body {
+.box {
+    padding: 1rem;
     color: var(--font);
     background-color: var(--background);
-}
-
-body div {
     border: 1px solid var(--border);
 }
