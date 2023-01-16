@@ -8,7 +8,8 @@
 		"lint": "eslint . --max-warnings 0",
 		"build": "webpack",
 		"start": "webpack serve --open",
-		"pre-push": "npm run lint && npm run test && npm run build"
+		"pre-push": "npm run lint && npm run test && npm run build",
+		"deploy": "npm run build && gh-pages -d dist"
 	},
 	"repository": {
 		"type": "git",
@@ -19,7 +20,7 @@
 	"bugs": {
 		"url": "https://github.com/TroyHisted/outlook/issues"
 	},
-	"homepage": "https://github.com/TroyHisted/outlook#readme",
+	"homepage": "https://troyhisted.github.io/outlook",
 	"devDependencies": {
 		"@types/jest": "^29.2.5",
 		"@types/react": "^18.0.26",
@@ -28,6 +29,7 @@
 		"@typescript-eslint/parser": "^5.48.1",
 		"css-loader": "^6.7.3",
 		"eslint": "^8.31.0",
+		"gh-pages": "^4.0.0",
 		"html-webpack-plugin": "^5.5.0",
 		"jest": "^29.3.1",
 		"jest-environment-jsdom": "^29.3.1",
@@ -40,8 +42,8 @@
 		"webpack-dev-server": "^4.11.1"
 	},
 	"dependencies": {
+		"purecss": "^3.0.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"purecss": "^3.0.0"
+		"react-dom": "^18.2.0"
 	}
 }

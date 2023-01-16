@@ -8,17 +8,17 @@ function App() {
 		<div className="pure-g">
 			<div className="pure-u-1-3">
 				<div className='box'>
-					Column A
+					Column 1
 				</div>
 			</div>
 			<div className="pure-u-1-3">
 				<div className='box'>
-					Column B
+					Column 2
 				</div>
 			</div>
 			<div className="pure-u-1-3">
 				<div className='box'>
-					Column C
+					Column 3
 				</div>
 			</div>
 		</div>
