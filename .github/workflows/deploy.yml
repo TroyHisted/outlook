@@ -13,5 +13,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
+      - run: git config user.name "Github Action" && git config user.email "troyhisted@users.noreply.github.com"
       - run: npm ci
       - run: npm run deploy
