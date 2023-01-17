@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { Location } from './location/Location';
 import 'purecss/build/pure.css'
 import './style.css';
 
@@ -8,17 +9,15 @@ function App() {
 		<div className="pure-g">
 			<div className="pure-u-1-3">
 				<div className='box'>
-					Column
 				</div>
 			</div>
 			<div className="pure-u-1-3">
 				<div className='box'>
-					Column
+					<Location  />
 				</div>
 			</div>
 			<div className="pure-u-1-3">
 				<div className='box'>
-					Column
 				</div>
 			</div>
 		</div>
