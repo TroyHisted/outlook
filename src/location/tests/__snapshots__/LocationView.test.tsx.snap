@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+[
+  <button
+    className="pure-button pure-button-primary"
+    onClick={[Function]}
+  >
+    Get Current Location
+  </button>,
+  <p>
+    Current location: 
+    Nowhere
+  </p>,
+  <p>
+    Current Weather: 
+    unknown
+  </p>,
+]
+`;

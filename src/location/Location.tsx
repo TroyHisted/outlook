@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Weather from '../weather/Weather';
+import { useState } from 'react';
+import LocationView from './LocationView';
 
 type Geolocation = {
 	coords: {
@@ -33,18 +33,10 @@ export default function Location() {
 		);
 	};
 
-	return (
-		<>
-			<button
-				onClick={getLocation}
-				className="pure-button pure-button-primary"
-			>
-				Get Current Location
-			</button>
-			<p>Current location: {locationDescription}</p>
-			{latitude !== 0 && longitude !== 0 && (
-				<Weather latitude={latitude} longitude={longitude} />
-			)}
-		</>
-	);
+	return LocationView({
+		locationDescription,
+		getLocation,
+		latitude,
+		longitude,
+	});
 }

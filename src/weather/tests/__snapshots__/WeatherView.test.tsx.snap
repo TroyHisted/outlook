@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with a forecast 1`] = `
+[
+  <p>
+    Current Weather: 
+    Partly Cloudy
+  </p>,
+  <img
+    src="clouds.png"
+    title="Partly Cloudy"
+  />,
+]
+`;
+
+exports[`renders correctly with no forecast 1`] = `
+<p>
+  Current Weather: 
+</p>
+`;
