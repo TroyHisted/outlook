@@ -1,12 +1,12 @@
 :root {
-	--font: midnightblue;
-	--background: silver;
-	--border: gray;
+  --font: midnightblue;
+  --background: silver;
+  --border: gray;
 }
 
 .box {
-	padding: 1rem;
-	color: var(--font);
-	background-color: var(--background);
-	border: 1px solid var(--border);
+  padding: 1rem;
+  color: var(--font);
+  background-color: var(--background);
+  border: 1px solid var(--border);
 }
