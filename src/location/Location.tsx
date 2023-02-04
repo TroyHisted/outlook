@@ -1,5 +1,5 @@
-import React, { FunctionComponent, useState } from 'react';
-import { Weather } from '../weather/Weather';
+import React, { useState } from 'react';
+import Weather from '../weather/Weather';
 
 type Geolocation = {
 	coords: {
@@ -8,8 +8,8 @@ type Geolocation = {
 	};
 };
 
-export const Location: FunctionComponent = () => {
-	const [locationDescription, setLocationDescription] = useState('uknown');
+export default function Location() {
+	const [locationDescription, setLocationDescription] = useState('unknown');
 	const [latitude, setLatitude] = useState(0);
 	const [longitude, setLongitude] = useState(0);
 
@@ -47,4 +47,4 @@ export const Location: FunctionComponent = () => {
 			)}
 		</>
 	);
-};
+}

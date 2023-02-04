@@ -1,9 +1,4 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
-
-type LocationProps = {
-	latitude: number;
-	longitude: number;
-};
+import React, { useEffect, useState } from 'react';
 
 type Points = {
 	id: string;
@@ -87,11 +82,12 @@ type Forecast = {
 };
 
 // https://weather-gov.github.io/api/general-faqs
-
-export const Weather: FunctionComponent<LocationProps> = ({
-	latitude,
-	longitude,
-}) => {
+export default function Weather(props: {
+	/** Latitude in degrees. */
+	latitude: number;
+	/** Longitude in degrees. */
+	longitude: number;
+}) {
 	const [weatherDescription, setWeatherDescription] = useState('unknown');
 	const [forecastUrl, setForecastUrl] = useState('');
 	const [forecast, setForecast] = useState<Forecast>();
@@ -100,9 +96,9 @@ export const Weather: FunctionComponent<LocationProps> = ({
 		setWeatherDescription('loading...');
 
 		const response = await fetch(
-			`https://api.weather.gov/points/${latitude.toFixed(
-				4
-			)},${longitude.toFixed(4)}`
+			`https://api.weather.gov/points/${props.latitude.toFixed(
+				3
+			)},${props.longitude.toFixed(3)}`
 		);
 		if (response.status === 200) {
 			const points: Points = await response.json();
@@ -129,7 +125,7 @@ export const Weather: FunctionComponent<LocationProps> = ({
 
 	useEffect(() => {
 		fetchPointData();
-	}, [latitude, longitude]);
+	}, [props.latitude, props.longitude]);
 
 	return (
 		<>
@@ -142,4 +138,4 @@ export const Weather: FunctionComponent<LocationProps> = ({
 			)}
 		</>
 	);
-};
+}

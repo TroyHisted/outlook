@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { Location } from './location/Location';
+import Location from './location/Location';
 import 'purecss/build/pure.css';
 import './style.css';
 
