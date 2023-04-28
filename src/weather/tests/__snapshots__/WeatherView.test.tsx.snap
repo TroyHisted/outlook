@@ -6,10 +6,13 @@ exports[`renders correctly with a forecast 1`] = `
     Current Weather: 
     Partly Cloudy
   </p>,
-  <img
-    src="clouds.png"
-    title="Partly Cloudy"
-  />,
+  <div>
+    <div>
+      2020-01-01T00:00:00+0
+      2020-01-01T00:00:00+0
+      Partly Cloudy with a chance of meatballs.
+    </div>
+  </div>,
 ]
 `;
 

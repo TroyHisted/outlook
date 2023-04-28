@@ -6,10 +6,15 @@ export default (props: { weatherDescription: string; forecast: Forecast }) => (
 	<>
 		<p>Current Weather: {props.weatherDescription}</p>
 		{props.forecast && (
-			<img
-				src={props.forecast.properties.periods[0].icon}
-				title={props.forecast.properties.periods[0].shortForecast}
-			/>
+			<div>
+				{props.forecast.properties.periods.map((period) => (
+					<div key={period.startTime}>
+						{period.startTime}
+						{period.endTime}
+						{period.detailedForecast}
+					</div>
+				))}
+			</div>
 		)}
 	</>
 );

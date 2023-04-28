@@ -35,7 +35,7 @@ export default function Weather(props: {
 		if (response.status === 200) {
 			const f: Forecast = await response.json();
 			setWeatherDescription(f.properties.periods[0].detailedForecast);
-			setForecast(forecast);
+			setForecast(f);
 		} else {
 			setWeatherDescription('Failed lookup');
 		}
