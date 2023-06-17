@@ -31,7 +31,12 @@ export default function Weather(props: {
 	};
 
 	const fetchForecast = async () => {
-		const response = await fetch(forecastUrl);
+		const response = await fetch(`${forecastUrl}?units=us`, {
+			headers: {
+				'Feature-Flags':
+					'forecast_temperature_qv,forecast_wind_speed_qv',
+			},
+		});
 		if (response.status === 200) {
 			const f: Forecast = await response.json();
 			setWeatherDescription(f.properties.periods[0].detailedForecast);

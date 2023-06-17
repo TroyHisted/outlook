@@ -14,7 +14,9 @@ test('renders correctly with a forecast', () => {
 			<WeatherView
 				forecast={{
 					properties: {
-						updated: '2020-01-01T00:00:00+0',
+						generatedAt: '2020-01-01T00:00:00+0',
+						units: 'us',
+						updateTime: '2020-01-01T00:00:00+0',
 						periods: [
 							{
 								number: 0,
@@ -22,12 +24,21 @@ test('renders correctly with a forecast', () => {
 								startTime: '2020-01-01T00:00:00+0',
 								endTime: '2020-01-01T00:00:00+0',
 								isDaytime: true,
-								temperature: 72,
-								temperatureUnit: 'F',
-								TemperatureTrend: 'steady',
-								windSpeed: '10 mph',
-								windDirection: 'e',
-								icon: 'clouds.png',
+								temperature: {
+									value: 72,
+									unitCode: 'wmoUnit:degC',
+								},
+								TemperatureTrend: null,
+								probabilityOfPrecipitation: {
+									unitCode: 'wmoUnit:percent',
+									value: 45,
+								},
+								windDirection: 'E',
+								windSpeed: {
+									maxValue: 15,
+									minValue: 5,
+									unitCode: 'wmoUnit:km_h-1',
+								},
 								shortForecast: 'Partly Cloudy',
 								detailedForecast:
 									'Partly Cloudy with a chance of meatballs.',

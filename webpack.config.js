@@ -39,6 +39,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'Outlook',
+			favicon: 'favicon.ico',
 		}),
 	],
 };

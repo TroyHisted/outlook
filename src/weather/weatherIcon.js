@@ -1,0 +1,15 @@
+export default {
+	sun: '☀',
+	cloud: '☁',
+	rain: '⛈',
+	snow: '❄',
+	thermometer: '🌡',
+	sunCloud: '🌤',
+	rainCloud: '🌧',
+	snowCloud: '🌨',
+	lightning: '🌩',
+	tornado: '🌪',
+	fog: '🌫',
+	wind: '🌬',
+	umbrella: '☂',
+};

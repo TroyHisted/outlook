@@ -1,0 +1,541 @@
+{
+	"@context": [
+		"https://geojson.org/geojson-ld/geojson-context.jsonld",
+		{
+			"@version": "1.1",
+			"wx": "https://api.weather.gov/ontology#",
+			"geo": "http://www.opengis.net/ont/geosparql#",
+			"unit": "http://codes.wmo.int/common/unit/",
+			"@vocab": "https://api.weather.gov/ontology#"
+		}
+	],
+	"type": "Feature",
+	"geometry": {
+		"type": "Polygon",
+		"coordinates": [
+			[
+				[-84.405616100000003, 42.689261799999997],
+				[-84.407919700000008, 42.667631699999994],
+				[-84.378498600000015, 42.665935699999991],
+				[-84.37618860000002, 42.687565699999993],
+				[-84.405616100000003, 42.689261799999997]
+			]
+		]
+	},
+	"properties": {
+		"updated": "2023-04-28T15:03:48+00:00",
+		"units": "us",
+		"forecastGenerator": "BaselineForecastGenerator",
+		"generatedAt": "2023-04-28T15:39:01+00:00",
+		"updateTime": "2023-04-28T15:03:48+00:00",
+		"validTimes": "2023-04-28T09:00:00+00:00/P7DT16H",
+		"elevation": {
+			"unitCode": "wmoUnit:m",
+			"value": 273.10079999999999
+		},
+		"periods": [
+			{
+				"number": 1,
+				"name": "Today",
+				"startTime": "2023-04-28T11:00:00-04:00",
+				"endTime": "2023-04-28T18:00:00-04:00",
+				"isDaytime": true,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 12.777777777777779
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": 90
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 8.3333333333333339
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 74
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 22.224,
+					"minValue": 14.816000000000001
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 48.152000000000001
+				},
+				"windDirection": "ENE",
+				"icon": "https://api.weather.gov/icons/land/day/rain,80/rain,90?size=medium",
+				"shortForecast": "Light Rain",
+				"detailedForecast": "Rain. Cloudy, with a high near 55. East northeast wind 9 to 14 mph, with gusts as high as 30 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
+			},
+			{
+				"number": 2,
+				"name": "Tonight",
+				"startTime": "2023-04-28T18:00:00-04:00",
+				"endTime": "2023-04-29T06:00:00-04:00",
+				"isDaytime": false,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 7.7777777777777777
+				},
+				"temperatureTrend": "rising",
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": 80
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 8.3333333333333339
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 89
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 25.928000000000001,
+					"minValue": 14.816000000000001
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 46.299999999999997
+				},
+				"windDirection": "ENE",
+				"icon": "https://api.weather.gov/icons/land/night/rain,80/rain,60?size=medium",
+				"shortForecast": "Rain",
+				"detailedForecast": "Rain. Cloudy. Low around 46, with temperatures rising to around 48 overnight. East northeast wind 9 to 16 mph, with gusts as high as 29 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
+			},
+			{
+				"number": 3,
+				"name": "Saturday",
+				"startTime": "2023-04-29T06:00:00-04:00",
+				"endTime": "2023-04-29T18:00:00-04:00",
+				"isDaytime": true,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 16.111111111111111
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": 60
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 6.666666666666667
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 89
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 18.52
+				},
+				"windGust": null,
+				"windDirection": "WSW",
+				"icon": "https://api.weather.gov/icons/land/day/rain,60/rain,50?size=medium",
+				"shortForecast": "Light Rain Likely",
+				"detailedForecast": "Rain likely. Mostly cloudy, with a high near 61. West southwest wind around 12 mph. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
+			},
+			{
+				"number": 4,
+				"name": "Saturday Night",
+				"startTime": "2023-04-29T18:00:00-04:00",
+				"endTime": "2023-04-30T06:00:00-04:00",
+				"isDaytime": false,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 5
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": 80
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 7.7777777777777777
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 93
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 20.372,
+					"minValue": 14.816000000000001
+				},
+				"windGust": null,
+				"windDirection": "SW",
+				"icon": "https://api.weather.gov/icons/land/night/rain,80?size=medium",
+				"shortForecast": "Light Rain",
+				"detailedForecast": "Rain. Mostly cloudy, with a low around 41. Southwest wind 9 to 13 mph. Chance of precipitation is 80%. New rainfall amounts between a tenth and quarter of an inch possible."
+			},
+			{
+				"number": 5,
+				"name": "Sunday",
+				"startTime": "2023-04-30T06:00:00-04:00",
+				"endTime": "2023-04-30T18:00:00-04:00",
+				"isDaytime": true,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 10.555555555555555
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": 60
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 4.4444444444444446
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 93
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 24.076000000000001,
+					"minValue": 14.816000000000001
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 37.039999999999999
+				},
+				"windDirection": "SW",
+				"icon": "https://api.weather.gov/icons/land/day/rain,60?size=medium",
+				"shortForecast": "Light Rain Likely",
+				"detailedForecast": "Rain likely. Mostly cloudy, with a high near 51. Southwest wind 9 to 15 mph, with gusts as high as 23 mph. Chance of precipitation is 60%."
+			},
+			{
+				"number": 6,
+				"name": "Sunday Night",
+				"startTime": "2023-04-30T18:00:00-04:00",
+				"endTime": "2023-05-01T06:00:00-04:00",
+				"isDaytime": false,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 3.3333333333333335
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": 60
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 2.2222222222222223
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 89
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 25.928000000000001,
+					"minValue": 20.372
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 40.744
+				},
+				"windDirection": "WSW",
+				"icon": "https://api.weather.gov/icons/land/night/rain,60?size=medium",
+				"shortForecast": "Light Rain Likely",
+				"detailedForecast": "Rain likely. Mostly cloudy, with a low around 38. Chance of precipitation is 60%."
+			},
+			{
+				"number": 7,
+				"name": "Monday",
+				"startTime": "2023-05-01T06:00:00-04:00",
+				"endTime": "2023-05-01T18:00:00-04:00",
+				"isDaytime": true,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 7.2222222222222223
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": 80
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 2.2222222222222223
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 92
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 37.039999999999999,
+					"minValue": 27.780000000000001
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 55.560000000000002
+				},
+				"windDirection": "W",
+				"icon": "https://api.weather.gov/icons/land/day/rain,70/rain,80?size=medium",
+				"shortForecast": "Light Rain",
+				"detailedForecast": "Rain. Mostly cloudy, with a high near 45. Chance of precipitation is 80%."
+			},
+			{
+				"number": 8,
+				"name": "Monday Night",
+				"startTime": "2023-05-01T18:00:00-04:00",
+				"endTime": "2023-05-02T06:00:00-04:00",
+				"isDaytime": false,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 3.3333333333333335
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": null
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 2.2222222222222223
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 85
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 37.039999999999999,
+					"minValue": 31.484000000000002
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 55.560000000000002
+				},
+				"windDirection": "W",
+				"icon": "https://api.weather.gov/icons/land/night/rain?size=medium",
+				"shortForecast": "Light Rain",
+				"detailedForecast": "Rain. Mostly cloudy, with a low around 38."
+			},
+			{
+				"number": 9,
+				"name": "Tuesday",
+				"startTime": "2023-05-02T06:00:00-04:00",
+				"endTime": "2023-05-02T18:00:00-04:00",
+				"isDaytime": true,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 8.3333333333333339
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": null
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 2.2222222222222223
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 85
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 37.039999999999999,
+					"minValue": 31.484000000000002
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 57.411999999999999
+				},
+				"windDirection": "WNW",
+				"icon": "https://api.weather.gov/icons/land/day/rain?size=medium",
+				"shortForecast": "Light Rain Likely",
+				"detailedForecast": "Rain likely. Mostly cloudy, with a high near 47."
+			},
+			{
+				"number": 10,
+				"name": "Tuesday Night",
+				"startTime": "2023-05-02T18:00:00-04:00",
+				"endTime": "2023-05-03T06:00:00-04:00",
+				"isDaytime": false,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 2.7777777777777777
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": null
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 1.6666666666666667
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 85
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 35.188000000000002,
+					"minValue": 24.076000000000001
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 51.856000000000002
+				},
+				"windDirection": "WNW",
+				"icon": "https://api.weather.gov/icons/land/night/rain/wind_bkn?size=medium",
+				"shortForecast": "Chance Light Rain then Mostly Cloudy",
+				"detailedForecast": "A chance of rain before 8pm. Mostly cloudy, with a low around 37."
+			},
+			{
+				"number": 11,
+				"name": "Wednesday",
+				"startTime": "2023-05-03T06:00:00-04:00",
+				"endTime": "2023-05-03T18:00:00-04:00",
+				"isDaytime": true,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 12.777777777777779
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": null
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 2.2222222222222223
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 85
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 27.780000000000001
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 40.744
+				},
+				"windDirection": "NW",
+				"icon": "https://api.weather.gov/icons/land/day/bkn/rain?size=medium",
+				"shortForecast": "Partly Sunny then Slight Chance Light Rain",
+				"detailedForecast": "A slight chance of rain after 2pm. Partly sunny, with a high near 55."
+			},
+			{
+				"number": 12,
+				"name": "Wednesday Night",
+				"startTime": "2023-05-03T18:00:00-04:00",
+				"endTime": "2023-05-04T06:00:00-04:00",
+				"isDaytime": false,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 3.3333333333333335
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": null
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 2.7777777777777777
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 85
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"maxValue": 25.928000000000001,
+					"minValue": 14.816000000000001
+				},
+				"windGust": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 38.892000000000003
+				},
+				"windDirection": "NW",
+				"icon": "https://api.weather.gov/icons/land/night/rain?size=medium",
+				"shortForecast": "Slight Chance Light Rain",
+				"detailedForecast": "A slight chance of rain. Mostly cloudy, with a low around 38."
+			},
+			{
+				"number": 13,
+				"name": "Thursday",
+				"startTime": "2023-05-04T06:00:00-04:00",
+				"endTime": "2023-05-04T18:00:00-04:00",
+				"isDaytime": true,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 16.111111111111111
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": null
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 4.4444444444444446
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 89
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 18.52
+				},
+				"windGust": null,
+				"windDirection": "NNW",
+				"icon": "https://api.weather.gov/icons/land/day/rain?size=medium",
+				"shortForecast": "Chance Light Rain",
+				"detailedForecast": "A chance of rain. Mostly sunny, with a high near 61."
+			},
+			{
+				"number": 14,
+				"name": "Thursday Night",
+				"startTime": "2023-05-04T18:00:00-04:00",
+				"endTime": "2023-05-05T06:00:00-04:00",
+				"isDaytime": false,
+				"temperature": {
+					"unitCode": "wmoUnit:degC",
+					"value": 5.5555555555555554
+				},
+				"temperatureTrend": null,
+				"probabilityOfPrecipitation": {
+					"unitCode": "wmoUnit:percent",
+					"value": null
+				},
+				"dewpoint": {
+					"unitCode": "wmoUnit:degC",
+					"value": 5
+				},
+				"relativeHumidity": {
+					"unitCode": "wmoUnit:percent",
+					"value": 89
+				},
+				"windSpeed": {
+					"unitCode": "wmoUnit:km_h-1",
+					"value": 18.52
+				},
+				"windGust": null,
+				"windDirection": "NE",
+				"icon": "https://api.weather.gov/icons/land/night/rain?size=medium",
+				"shortForecast": "Chance Light Rain",
+				"detailedForecast": "A chance of rain. Mostly cloudy, with a low around 42."
+			}
+		]
+	}
+}

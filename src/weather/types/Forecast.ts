@@ -1,35 +1,14 @@
+import { Period } from './Period';
+
 export type Forecast = {
 	properties: {
-		/** The time when the forecast was generated */
-		updated: string;
-		periods: [
-			{
-				/** Index */
-				number: number;
-				/** Human description of the period, e.g. 'Tonight' or 'Friday' */
-				name: string;
-				/** Time in yyy-mm-ddTHH:MM:ss+offset */
-				startTime: string;
-				/** Time in yyy-mm-ddTHH:MM:ss+offset */
-				endTime: string;
-				isDaytime: boolean;
-				/** The temperature in degrees */
-				temperature: number;
-				/** Temperature unit */
-				temperatureUnit: 'F' | 'C';
-				/** Description of temperature change, e.g. falling, rising */
-				TemperatureTrend: string;
-				/** Description of the wind speed, e.g. 10 mph */
-				windSpeed: string;
-				/** Compass direction of wind origin e.g. W, NW, WSW, etc... */
-				windDirection: string;
-				/** Url */
-				icon: string;
-				/** Brief description of the weather pattern, e.g. Mostly Cloudy */
-				shortForecast: string;
-				/** A long description of the expected weather over this time period */
-				detailedForecast: string;
-			}
-		];
+		/** Denotes the units used in the textual portions of the forecast. */
+		units: 'us' | 'si';
+		/** The time this forecast data was generated. */
+		generatedAt: string;
+		/** The last update time of the data this forecast was generated from. */
+		updateTime: string;
+		/** Segments of the forecast. */
+		periods: Period[];
 	};
 };
