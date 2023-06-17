@@ -87,23 +87,8 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="pure-u-1-2">
-				<div className="box">
-					<h2>Today</h2>
-					<p>55° F</p>
-					<p>precipitation: 90%</p>
-					<p>humidity: 74%</p>
-					<p>wind: 9 to 14 mph</p>
-					<p>
-						Rain. Cloudy, with a high near 55. East northeast wind 9
-						to 14 mph, with gusts as high as 30 mph. Chance of
-						precipitation is 90%. New rainfall amounts between a
-						quarter and half of an inch possible.
-					</p>
-				</div>
-			</div>
-			<div className="pure-u-1 pure-u-md-1-6">
-				<div className="box">
+			<div className="pure-u-1 pure-u-md-1-8">
+				<div className="box box-hourly">
 					<div className="pure-g">
 						<div className="pure-u-1-2 pure-u-md-1">
 							☁ 10 AM Sunday
@@ -113,8 +98,8 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="pure-u-1 pure-u-md-1-6">
-				<div className="box">
+			<div className="pure-u-1 pure-u-md-1-8">
+				<div className="box box-hourly">
 					<div className="pure-g">
 						<div className="pure-u-1-3">🌤 11 AM Sunday</div>
 						<div className="pure-u-1-3">56° F</div>
@@ -122,8 +107,8 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="pure-u-1 pure-u-md-1-6">
-				<div className="box">
+			<div className="pure-u-1 pure-u-md-1-8">
+				<div className="box box-hourly">
 					<div className="pure-g">
 						<div className="pure-u-1-3">☀ 12 AM Sunday</div>
 						<div className="pure-u-1-3">56° F</div>
@@ -131,8 +116,8 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="pure-u-1 pure-u-md-1-6">
-				<div className="box">
+			<div className="pure-u-1 pure-u-md-1-8">
+				<div className="box box-hourly">
 					<div className="pure-g">
 						<div className="pure-u-1-3">🌧 1 PM Sunday</div>
 						<div className="pure-u-1-3">56° F</div>
@@ -140,8 +125,8 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="pure-u-1 pure-u-md-1-6">
-				<div className="box">
+			<div className="pure-u-1 pure-u-md-1-8">
+				<div className="box box-hourly">
 					<div className="pure-g">
 						<div className="pure-u-1-3">🌧 1 PM Sunday</div>
 						<div className="pure-u-1-3">56° F</div>
@@ -149,8 +134,8 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="pure-u-1 pure-u-md-1-6">
-				<div className="box">
+			<div className="pure-u-1 pure-u-md-1-8">
+				<div className="box box-hourly">
 					<div className="pure-g">
 						<div className="pure-u-1-3">🌧 1 PM Sunday</div>
 						<div className="pure-u-1-3">56° F</div>

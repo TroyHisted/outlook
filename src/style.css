@@ -1,12 +1,33 @@
 :root {
-	--font: midnightblue;
-	--background: silver;
-	--border: gray;
+	--font: rgb(240, 240, 240);
+	--box-background: rgb(32, 32, 32);
+	--border: rgb(64, 64, 64);
+	--background: rgb(16, 16, 16);
+}
+
+body {
+	background: var(--background);
 }
 
 .box {
 	padding: 1rem;
 	color: var(--font);
-	background-color: var(--background);
+	background-color: var(--box-background);
 	border: 1px solid var(--border);
+	box-shadow: 1px 2px 2px 3px rgb(0, 0, 0);
+	margin: 0.5rem;
+}
+
+.box-hourly {
+	height: 80px;
+}
+
+.box h2,
+.box h3,
+.box h4 {
+	color: white;
+}
+
+.box h2:first-child {
+	margin-top: 0.5rem;
 }
