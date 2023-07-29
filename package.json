@@ -7,7 +7,7 @@
 		"test": "jest",
 		"lint": "eslint . --max-warnings 0",
 		"build": "webpack",
-		"start": "webpack serve --open",
+		"start": "webpack serve --open --mode=development",
 		"pre-push": "npm run lint && npm run test && npm run build",
 		"deploy": "npm run build && gh-pages -d dist"
 	},
@@ -46,7 +46,7 @@
 		"webpack-dev-server": "4"
 	},
 	"dependencies": {
-		"purecss": "3",
+		"@picocss/pico": "1.5.10",
 		"react": "18",
 		"react-dom": "18"
 	}

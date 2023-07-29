@@ -1,0 +1,78 @@
+i:before {
+	font-size: 150%;
+	line-height: 1rem;
+	vertical-align: middle;
+	font-family: arial unicode ms, lucida sans unicode, sans-serif;
+	font-style: normal;
+}
+i.humidity:before {
+	content: '🌢';
+	font-size: 100%;
+}
+i.sun:before {
+	content: '☀';
+}
+i.cloud:before {
+	content: '☁';
+}
+i.rain:before {
+	content: '⛈';
+}
+i.snow:before {
+	content: '❄';
+}
+i.thermometer:before {
+	content: '🌡';
+}
+i.sun-cloud:before {
+	content: '🌤';
+}
+i.rain-cloud:before {
+	content: '🌧';
+}
+i.snow-cloud:before {
+	content: '🌨';
+}
+i.lightning:before {
+	content: '🌩';
+}
+i.tornado:before {
+	content: '🌪';
+}
+i.fog:before {
+	content: '🌫';
+}
+i.wind:before {
+	content: '🌬';
+}
+i.umbrella:before {
+	content: '☂';
+}
+i.moon:before {
+	content: '☾';
+}
+
+i.compass-n:before {
+	content: '🠕';
+}
+i.compass-ne:before {
+	content: '⬈';
+}
+i.compass-e:before {
+	content: '🠖';
+}
+i.compass-se:before {
+	content: '⬊';
+}
+i.compass-s:before {
+	content: '🠗';
+}
+i.compass-sw:before {
+	content: '⬋';
+}
+i.compass-w:before {
+	content: '🠔';
+}
+i.compass-nw:before {
+	content: '⬉';
+}
