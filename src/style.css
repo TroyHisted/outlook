@@ -20,7 +20,7 @@ dfn {
 	color: var(--muted-color);
 	vertical-align: text-top;
 	font-style: normal;
-	padding-left: 2px;
+	padding-left: 1px;
 }
 
 figure {
