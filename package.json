@@ -16,7 +16,7 @@
 		"url": "git+https://github.com/TroyHisted/outlook.git"
 	},
 	"author": "Troy Histed",
-	"license": "unlicense",
+	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/TroyHisted/outlook/issues"
 	},
@@ -48,6 +48,7 @@
 	"dependencies": {
 		"@picocss/pico": "1",
 		"react": "18",
-		"react-dom": "18"
+		"react-dom": "18",
+		"wouter": "2"
 	}
 }
