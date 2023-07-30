@@ -2,23 +2,21 @@ import React from 'react';
 
 export default () => (
 	<>
-		<section className="grid">
-			<article>
-				<form>
+		<article>
+			<div className="grid">
+				{/* <form>
 					<input
 						type="search"
 						id="location"
 						name="location"
 						placeholder="Lookup by Zip / City"
 					/>
-				</form>
-			</article>
-			<article>
+				</form> */}
 				<div>
 					<button>Use Current Location</button>
 				</div>
-			</article>
-		</section>
+			</div>
+		</article>
 		<section>
 			<article>
 				<header className="headings">
