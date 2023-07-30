@@ -11,9 +11,16 @@ export default () => (
 				</a>
 			</div>
 			<div>
-				Built with:{' '}
+				Made with:{' '}
 				<a href="https://react.dev/" className="secondary">
 					React
+				</a>
+				,{' '}
+				<a
+					href="https://github.com/molefrog/wouter#readme"
+					className="secondary"
+				>
+					Wouter
 				</a>{' '}
 				&amp;{' '}
 				<a href="https://picocss.com/" className="secondary">

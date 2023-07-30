@@ -1,7 +1,6 @@
-import React from 'react';
-
 export default () => (
-	<>
-		<p>News:</p>
-	</>
+	<article>
+		<h2>News</h2>
+		<p>Nothing important happened.</p>
+	</article>
 );

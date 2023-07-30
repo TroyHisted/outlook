@@ -4,25 +4,25 @@ export default () => (
 			<ul>
 				<li>
 					<strong>
-						<img
-							src="favicon.ico"
-							width={48}
-							alt="Logo containing the letters O and L"
-						/>
+						<a href="#">
+							<img
+								src="favicon.ico"
+								width={48}
+								alt="Logo containing the letters O and L"
+							/>
+						</a>
 					</strong>
 				</li>
 			</ul>
 			<ul>
 				<li>
-					<a href="#">News</a>
+					<a href="#/news">News</a>
 				</li>
 				<li>
-					<a href="#" role="button">
-						Weather
-					</a>
+					<a href="#/weather">Weather</a>
 				</li>
 				<li>
-					<a href="#">Sports</a>
+					<a href="#/sports">Sports</a>
 				</li>
 			</ul>
 		</nav>
