@@ -16,5 +16,6 @@ function App() {
 	);
 }
 
-const root = createRoot(document.body);
-root.render(<App />);
+const appContainer = document.createElement('div');
+document.body.appendChild(appContainer);
+createRoot(appContainer).render(<App />);
