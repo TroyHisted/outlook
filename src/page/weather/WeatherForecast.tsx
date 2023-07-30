@@ -4,7 +4,7 @@ import type { Forecast } from './types/Forecast';
 import type { Points } from './types/Points';
 
 // https://weather-gov.github.io/api/general-faqs
-export default function Weather(props: {
+export default function WeatherForecast(props: {
 	/** Latitude in degrees. */
 	latitude: number;
 	/** Longitude in degrees. */

@@ -1,5 +1,5 @@
 import { Route, Switch } from 'wouter';
-import WeatherPage from './page/weather/WeatherPage';
+import Weather from './page/weather/Weather';
 import News from './page/news/News';
 import Sports from './page/sports/Sports';
 import Home from './page/home/Home';
@@ -23,8 +23,8 @@ const App = () => {
 
 	return (
 		<Switch location={location}>
-			<Route path="/weather" component={WeatherPage} />
-			<Route path="/weather/:zip" component={WeatherPage} />
+			<Route path="/weather" component={Weather} />
+			<Route path="/weather/:zip" component={Weather} />
 			<Route path="/news" component={News} />
 			<Route path="/sports" component={Sports} />
 			<Route path="/" component={Home} />

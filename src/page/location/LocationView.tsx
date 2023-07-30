@@ -1,5 +1,5 @@
 import React from 'react';
-import Weather from '../weather/Weather';
+import WeatherForecast from '../weather/WeatherForecast';
 
 export default (props: {
 	getLocation: () => void;
@@ -16,7 +16,10 @@ export default (props: {
 		</button>
 		<p>Current location: {props.locationDescription}</p>
 		{props.latitude !== 0 && props.longitude !== 0 && (
-			<Weather latitude={props.latitude} longitude={props.longitude} />
+			<WeatherForecast
+				latitude={props.latitude}
+				longitude={props.longitude}
+			/>
 		)}
 	</>
 );
