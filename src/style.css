@@ -23,6 +23,15 @@ dfn {
 	padding-left: 1px;
 }
 
+article {
+	margin-bottom: 0;
+}
+
+main > footer {
+	margin: var(--block-spacing-vertical) 0;
+	font-size: 75%;
+}
+
 figure {
 	margin: 1rem;
 	padding: 0.5rem;

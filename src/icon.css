@@ -1,13 +1,12 @@
 i:before {
-	font-size: 150%;
+	font-size: 175%;
 	line-height: 1rem;
 	vertical-align: middle;
 	font-family: arial unicode ms, lucida sans unicode, sans-serif;
 	font-style: normal;
 }
 i.humidity:before {
-	content: '🌢';
-	font-size: 100%;
+	content: '♨';
 }
 i.sun:before {
 	content: '☀';
@@ -53,26 +52,26 @@ i.moon:before {
 }
 
 i.compass-n:before {
-	content: '🠕';
+	content: '⭡';
 }
 i.compass-ne:before {
-	content: '⬈';
+	content: '⭧';
 }
 i.compass-e:before {
-	content: '🠖';
+	content: '⭢';
 }
 i.compass-se:before {
-	content: '⬊';
+	content: '⭨';
 }
 i.compass-s:before {
-	content: '🠗';
+	content: '⭣';
 }
 i.compass-sw:before {
-	content: '⬋';
+	content: '⭩';
 }
 i.compass-w:before {
-	content: '🠔';
+	content: '⭠';
 }
 i.compass-nw:before {
-	content: '⬉';
+	content: '⭦';
 }
