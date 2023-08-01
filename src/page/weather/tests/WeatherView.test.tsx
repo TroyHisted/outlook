@@ -33,6 +33,10 @@ test('renders correctly with a forecast', () => {
 									unitCode: 'wmoUnit:percent',
 									value: 45,
 								},
+								relativeHumidity: {
+									unitCode: 'wmoUnit:percent',
+									value: 75,
+								},
 								windDirection: 'E',
 								windSpeed: {
 									maxValue: 15,

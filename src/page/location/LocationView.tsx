@@ -1,4 +1,3 @@
-import React from 'react';
 import WeatherForecast from '../weather/WeatherForecast';
 
 export default (props: {

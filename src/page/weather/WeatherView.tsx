@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Forecast } from './types/Forecast';
 
 // https://weather-gov.github.io/api/general-faqs

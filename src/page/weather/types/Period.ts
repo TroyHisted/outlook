@@ -25,14 +25,22 @@ export type Period = {
 		/** The value. */
 		value: number;
 	};
+	relativeHumidity: {
+		/** The units. */
+		unitCode: 'wmoUnit:percent';
+		/** The value. */
+		value: number;
+	};
 	/** Wind speed information. */
 	windSpeed: {
 		/** The unit of measure. */
 		unitCode: 'wmoUnit:km_h-1';
 		/** Min wind speed. */
-		minValue: number;
+		minValue?: number;
 		/** Max wind speed. */
-		maxValue: number;
+		maxValue?: number;
+		/** value if there is no min/max? */
+		value?: number;
 	};
 	/** The prevailing direction of the wind for the period, using a 16-point compass. */
 	windDirection:

@@ -1,6 +1,10 @@
-import React from 'react';
+import { LoadingStatus } from './types/LoadingStatus';
 
-export default () => (
+export default (props: {
+	getLocation: () => void;
+	loadingStatus: LoadingStatus;
+	error?: string;
+}) => (
 	<article>
 		<div className="grid">
 			<form>
@@ -12,8 +16,16 @@ export default () => (
 				/>
 			</form>
 			<div>
-				<button>Use Current Location</button>
+				<button
+					aria-busy={
+						props.loadingStatus === 'Loading' ? 'true' : 'false'
+					}
+					onClick={props.getLocation}
+				>
+					Use Current Location
+				</button>
 			</div>
 		</div>
+		{props.error && <p>{props.error}</p>}
 	</article>
 );
