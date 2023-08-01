@@ -19,6 +19,7 @@ export default () => {
 							</a>
 						</strong>
 					</li>
+					<li>My Today</li>
 				</ul>
 				<ul>
 					<li>
@@ -32,9 +33,7 @@ export default () => {
 					</li>
 				</ul>
 			</nav>
-			<div>
-				Outlook - <small>{formattedDate}</small>
-			</div>
+			<small>{formattedDate}</small>
 		</header>
 	);
 };

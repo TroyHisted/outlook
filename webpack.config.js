@@ -38,7 +38,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'Outlook',
+			title: 'My Today',
 			favicon: 'favicon.ico',
 		}),
 	],
