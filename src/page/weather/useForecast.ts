@@ -4,35 +4,15 @@ import type { Points } from './types/Points';
 import { LoadingStatus } from './types/LoadingStatus';
 
 // https://weather-gov.github.io/api/general-faqs
-export default function useForecast(props: {
-	/** Latitude in degrees. */
-	latitude: number;
-	/** Longitude in degrees. */
-	longitude: number;
-}) {
+export default function useForecast(props: { points?: Points }) {
 	const [loadingStatus, setLoadingStatus] =
 		useState<LoadingStatus>('NotLoaded');
 	const [error, setError] = useState<string>();
-	const [forecastUrl, setForecastUrl] = useState('');
 	const [forecast, setForecast] = useState<Forecast>();
 
-	const fetchPointData = async () => {
+	const fetchForecast = async (points: Points) => {
 		setLoadingStatus('Loading');
-		const response = await fetch(
-			`https://api.weather.gov/points/${props.latitude.toFixed(
-				3
-			)},${props.longitude.toFixed(3)}`
-		);
-		if (response.status === 200) {
-			const points: Points = await response.json();
-			setForecastUrl(points.properties.forecast);
-		} else {
-			setLoadingStatus('NotLoaded');
-			setError('Failed lookup');
-		}
-	};
-
-	const fetchForecast = async () => {
+		const forecastUrl = points.properties.forecast;
 		const response = await fetch(`${forecastUrl}?units=us`, {
 			headers: {
 				'Feature-Flags':
@@ -51,14 +31,8 @@ export default function useForecast(props: {
 	};
 
 	useEffect(() => {
-		fetchForecast();
-	}, [forecastUrl]);
-
-	useEffect(() => {
-		if (props.latitude && props.longitude) {
-			fetchPointData();
-		}
-	}, [props.latitude, props.longitude]);
+		fetchForecast(props.points);
+	}, [props.points]);
 
 	return {
 		loadingStatus,

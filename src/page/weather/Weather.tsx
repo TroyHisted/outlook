@@ -4,6 +4,7 @@ import useLocation from './useLocation';
 import useForecast from './useForecast';
 import SevenDayForecast from './SevenDayForecast';
 import SinglePeriodForecast from './SinglePeriodForecast';
+import usePoints from './usePoints';
 
 export default () => {
 	const {
@@ -13,9 +14,12 @@ export default () => {
 		getLocation,
 		error: locationError,
 	} = useLocation();
-	const { loadingStatus: forecastLoadingStatus, forecast } = useForecast({
+	const { points } = usePoints({
 		latitude,
 		longitude,
+	});
+	const { loadingStatus: forecastLoadingStatus, forecast } = useForecast({
+		points,
 	});
 
 	if (locationLoadingStatus !== 'Loaded') {
