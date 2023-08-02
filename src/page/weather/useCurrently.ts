@@ -1,6 +1,8 @@
 import { Forecast } from './types/Forecast';
 
 type SinglePeriodForecast = {
+	timeOfDay: string;
+	timeSuffix: string;
 	dayOfWeek: string;
 	isDaytime: boolean;
 	temperature: string;
@@ -13,8 +15,8 @@ type SinglePeriodForecast = {
 	summary: string;
 };
 
-export default function useSevenDayForecast(forecast: Forecast) {
-	const periodForecasts: SinglePeriodForecast[] =
+export default function useCurrently(forecast: Forecast) {
+	const hourlyForecast: SinglePeriodForecast[] =
 		forecast.properties.periods.map((period) => {
 			let temp = period.temperature.value;
 			if (period.temperature.unitCode === 'wmoUnit:degC') {
@@ -34,13 +36,15 @@ export default function useSevenDayForecast(forecast: Forecast) {
 				wind = '--';
 			}
 
+			const startTime = new Date(period.startTime);
+			const startTimeHour = startTime.getHours();
+
 			return {
-				dayOfWeek: new Date(period.endTime).toLocaleDateString(
-					'en-us',
-					{
-						weekday: 'short',
-					}
-				),
+				timeOfDay: `${startTimeHour % 12}`,
+				timeSuffix: startTimeHour > 11 ? 'pm' : 'am',
+				dayOfWeek: startTime.toLocaleDateString('en-us', {
+					weekday: 'long',
+				}),
 				isDaytime: period.isDaytime,
 				humidity: `${period.relativeHumidity.value}`,
 				icon: '',
@@ -54,5 +58,5 @@ export default function useSevenDayForecast(forecast: Forecast) {
 			};
 		});
 
-	return { periodForecasts };
+	return { hourlyForecast };
 }

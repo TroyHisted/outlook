@@ -5,6 +5,7 @@ import useForecast from './useForecast';
 import SevenDayForecast from './SevenDayForecast';
 import SinglePeriodForecast from './SinglePeriodForecast';
 import usePoints from './usePoints';
+import useHourlyForecast from './useHourlyForecast';
 
 export default () => {
 	const {
@@ -21,6 +22,8 @@ export default () => {
 	const { loadingStatus: forecastLoadingStatus, forecast } = useForecast({
 		points,
 	});
+	const { loadingStatus: hourlyForecastLoadingStatus, hourlyForecast } =
+		useHourlyForecast({ points });
 
 	if (locationLoadingStatus !== 'Loaded') {
 		return (
@@ -32,13 +35,20 @@ export default () => {
 		);
 	}
 
-	if (forecastLoadingStatus === 'Loaded') {
-		return (
-			<>
-				<Currently />
-				<SinglePeriodForecast forecast={forecast} />
-				<SevenDayForecast forecast={forecast} />
-			</>
-		);
-	}
+	return (
+		<>
+			{hourlyForecastLoadingStatus === 'Loading' && (
+				<p>Loading Hourly Forecast</p>
+			)}
+			{hourlyForecastLoadingStatus === 'Loaded' && (
+				<Currently hourlyForecast={hourlyForecast} />
+			)}
+			{forecastLoadingStatus === 'Loaded' && (
+				<>
+					<SinglePeriodForecast forecast={forecast} />
+					<SevenDayForecast forecast={forecast} />
+				</>
+			)}
+		</>
+	);
 };
