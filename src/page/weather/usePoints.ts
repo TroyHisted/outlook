@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import type { Points } from './types/Points';
-import { LoadingStatus } from './types/LoadingStatus';
+import useApi from '../../api/useApi';
 
 // https://weather-gov.github.io/api/general-faqs
 export default function usePoints(props: {
@@ -9,38 +9,22 @@ export default function usePoints(props: {
 	/** Longitude in degrees. */
 	longitude: number;
 }) {
-	const [loadingStatus, setLoadingStatus] =
-		useState<LoadingStatus>('NotLoaded');
-	const [error, setError] = useState<string>();
-	const [points, setPoints] = useState<Points>();
-
-	const fetchPointData = async () => {
-		setLoadingStatus('Loading');
-		const response = await fetch(
-			`https://api.weather.gov/points/${props.latitude.toFixed(
-				3
-			)},${props.longitude.toFixed(3)}`
-		);
-		if (response.status === 200) {
-			const points: Points = await response.json();
-			setPoints(points);
-			setError(undefined);
-			setLoadingStatus('Loaded');
-		} else {
-			setLoadingStatus('NotLoaded');
-			setError('Failed lookup');
-		}
-	};
+	const pointsApi = useApi<Points, { latitude: string; longitude: string }>(
+		'https://api.weather.gov/points/{latitude},{longitude}'
+	);
 
 	useEffect(() => {
 		if (props.latitude && props.longitude) {
-			fetchPointData();
+			pointsApi.get({
+				latitude: props.latitude.toFixed(3),
+				longitude: props.longitude.toFixed(3),
+			});
 		}
 	}, [props.latitude, props.longitude]);
 
 	return {
-		loadingStatus,
-		error,
-		points,
+		loadingStatus: pointsApi.loadingStatus,
+		error: pointsApi.error,
+		points: pointsApi.data,
 	};
 }
