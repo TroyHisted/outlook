@@ -39,6 +39,21 @@ figure {
 	box-shadow: var(--card-box-shadow);
 }
 
+thead th + th {
+	writing-mode: sideways-lr;
+	text-align: left;
+	vertical-align: bottom;
+	position: relative;
+	padding-left: 3%;
+}
+
+thead th + th small {
+	font-size: 50%;
+	position: absolute;
+	left: 0;
+	bottom: 8px;
+}
+
 @media only screen and (max-width: 440px) {
 	td,
 	th {

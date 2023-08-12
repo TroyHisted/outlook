@@ -4,6 +4,7 @@ i:before {
 	vertical-align: middle;
 	font-family: arial unicode ms, lucida sans unicode, sans-serif;
 	font-style: normal;
+	writing-mode: initial;
 }
 i.humidity:before {
 	content: '♨';

@@ -51,39 +51,36 @@ export default (props: { hourlyForecast: Forecast }) => {
 						<thead>
 							<tr>
 								<th scope="col" colSpan={2}>
-									Hourly
+									<div>Hourly</div>
+									<sub>
+										<small>
+											{hourlyForecast[0].dayOfWeek}
+										</small>
+									</sub>
 								</th>
 								<th scope="col">
+									<small>Temperature</small>
 									<div>
 										<i className="thermometer" />
 									</div>
-									<sub>
-										<small>Temp</small>
-									</sub>
 								</th>
 								<th scope="col">
+									<small>Precipitation</small>
 									<div>
 										<i className="rain-cloud" />
 									</div>
-									<sub>
-										<small>Precip</small>
-									</sub>
 								</th>
 								<th scope="col">
+									<small>Humidity</small>
 									<div>
 										<i className="humidity" />
 									</div>
-									<sub>
-										<small>Humid</small>
-									</sub>
 								</th>
 								<th scope="col">
+									<small>Wind</small>
 									<div>
 										<i className="wind" />
 									</div>
-									<sub>
-										<small>MPH</small>
-									</sub>
 								</th>
 							</tr>
 						</thead>
@@ -94,10 +91,30 @@ export default (props: { hourlyForecast: Forecast }) => {
 									{forecast.timeOfDay === '1' &&
 										forecast.timeSuffix === 'am' && (
 											<tr>
-												<th scope="row" colSpan={6}>
+												<th scope="row" colSpan={2}>
 													<strong>
 														{forecast.dayOfWeek}
 													</strong>
+												</th>
+												<th scope="col">
+													<small>
+														<i className="thermometer" />
+													</small>
+												</th>
+												<th scope="col">
+													<small>
+														<i className="rain-cloud" />
+													</small>
+												</th>
+												<th scope="col">
+													<small>
+														<i className="humidity" />
+													</small>
+												</th>
+												<th scope="col">
+													<small>
+														<i className="wind" />
+													</small>
 												</th>
 											</tr>
 										)}
