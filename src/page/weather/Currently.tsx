@@ -86,7 +86,7 @@ export default (props: { hourlyForecast: Forecast }) => {
 						</thead>
 						<tbody>
 							<tr></tr>
-							{hourlyForecast.map((forecast, index) => (
+							{hourlyForecast.map((forecast) => (
 								<>
 									{forecast.timeOfDay === '1' &&
 										forecast.timeSuffix === 'am' && (
