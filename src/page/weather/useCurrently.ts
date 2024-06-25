@@ -28,7 +28,7 @@ export default function useCurrently(forecast: Forecast) {
 			let wind;
 			if (period.windSpeed.minValue) {
 				wind = `${period.windSpeed.minValue.toFixed(
-					0
+					0,
 				)}-${period.windSpeed.maxValue.toFixed(0)}`;
 			} else if (period.windSpeed.value) {
 				wind = `${period.windSpeed.value.toFixed(0)}`;

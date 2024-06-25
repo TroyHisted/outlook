@@ -33,14 +33,6 @@ export default (props: { forecast: Forecast }) => {
 						</th>
 						<th scope="col">
 							<div>
-								<i className="humidity" />
-							</div>
-							<sub>
-								<small>Humid</small>
-							</sub>
-						</th>
-						<th scope="col">
-							<div>
 								<i className="wind" />
 							</div>
 							<sub>
@@ -71,10 +63,6 @@ export default (props: { forecast: Forecast }) => {
 								{forecast.precipitation !== '--' && (
 									<dfn>%</dfn>
 								)}
-							</td>
-							<td>
-								{forecast.humidity}
-								<dfn>%</dfn>
 							</td>
 							<td>
 								{forecast.wind}

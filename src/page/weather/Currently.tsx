@@ -3,13 +3,13 @@ import useCurrently from './useCurrently';
 
 export default (props: { hourlyForecast: Forecast }) => {
 	const { hourlyForecast } = useCurrently(props.hourlyForecast);
-	console.log(props.hourlyForecast);
+	console.log(props.hourlyForecast.properties.periods[0]);
 	return (
 		<article>
 			<header className="headings">
 				<h2>
-					Currently 49
-					<dfn>°F</dfn>
+					Currently {hourlyForecast[0].temperature}
+					<dfn>{hourlyForecast[0].temperatureUnit}</dfn>
 				</h2>
 				<h3>
 					<i className="rain-cloud" /> Rain
@@ -19,30 +19,24 @@ export default (props: { hourlyForecast: Forecast }) => {
 				<dl>
 					<dt>Humidity</dt>
 					<dd>
-						92<dfn>%</dfn>
+						{hourlyForecast[0].humidity}
+						<dfn>%</dfn>
 					</dd>
 					<dt>Dewpoint</dt>
-					<dd>
-						69<dfn>°F</dfn>
-					</dd>
+					<dd>{/* <dfn>°F</dfn> */}</dd>
 					<dt>Barometer</dt>
-					<dd>
-						29.91<dfn>in</dfn>
-					</dd>
+					<dd>{/* 29.91<dfn>in</dfn> */}</dd>
 				</dl>
 				<dl>
 					<dt>Visibility</dt>
-					<dd>
-						10.00<dfn>mi</dfn>
-					</dd>
+					<dd>{/* 10.00<dfn>mi</dfn> */}</dd>
 					<dt>Wind</dt>
 					<dd>
-						7<dfn>mph</dfn>
+						{hourlyForecast[0].wind}
+						<dfn>{hourlyForecast[0].windUnit}</dfn>
 					</dd>
 					<dt>Direction</dt>
-					<dd>
-						<i className="compass-w" title="West" />
-					</dd>
+					<dd>{/* <i className="compass-w" title="West" /> */}</dd>
 				</dl>
 			</div>
 			<div className="grid">

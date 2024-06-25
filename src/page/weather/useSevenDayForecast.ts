@@ -26,7 +26,7 @@ export default function useSevenDayForecast(forecast: Forecast) {
 			let wind;
 			if (period.windSpeed.minValue) {
 				wind = `${period.windSpeed.minValue.toFixed(
-					0
+					0,
 				)}-${period.windSpeed.maxValue.toFixed(0)}`;
 			} else if (period.windSpeed.value) {
 				wind = `${period.windSpeed.value.toFixed(0)}`;
@@ -39,10 +39,10 @@ export default function useSevenDayForecast(forecast: Forecast) {
 					'en-us',
 					{
 						weekday: 'short',
-					}
+					},
 				),
 				isDaytime: period.isDaytime,
-				humidity: `${period.relativeHumidity.value}`,
+				humidity: '?',
 				icon: '',
 				precipitation:
 					precipitation === null ? '--' : `${precipitation}`,
